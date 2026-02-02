@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Dashboard - SkillHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SkillHire</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse-jobs.html">Browse Jobs</a>
+                <a href="#" onclick="logout()">Logout</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active" onclick="showSection('recommendations'); return false;">Recommended Jobs</a></li>
+                    <li><a href="#" onclick="showSection('applications'); return false;">My Applications</a></li>
+                    <li><a href="#" onclick="showSection('saved'); return false;">Saved Jobs</a></li>
+                    <li><a href="#" onclick="showSection('profile'); return false;">My Profile</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Recommendations Section -->
+                <section id="recommendations" class="dashboard-section">
+                    <h2 style="margin-bottom: 2rem;">Recommended Jobs for You</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        Jobs matched based on your skills and profile
+                    </p>
+                    <div id="recommendationsList">
+                        <div class="spinner"></div>
+                    </div>
+                </section>
+
+                <!-- Applications Section -->
+                <section id="applications" class="dashboard-section hidden">
+                    <h2 style="margin-bottom: 2rem;">My Applications</h2>
+                    <div id="applicationsList">
+                        <div class="spinner"></div>
+                    </div>
+                </section>
+
+                <!-- Saved Jobs Section -->
+                <section id="saved" class="dashboard-section hidden">
+                    <h2 style="margin-bottom: 2rem;">Saved Jobs</h2>
+                    <div id="savedJobsList">
+                        <div class="spinner"></div>
+                    </div>
+                </section>
+
+                <!-- Profile Section -->
+                <section id="profile" class="dashboard-section hidden">
+                    <h2 style="margin-bottom: 2rem;">My Profile</h2>
+                    <div id="profileContent">
+                        <div class="spinner"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/job-seeker-dashboard.js"></script>
+</body>
+</html>
+

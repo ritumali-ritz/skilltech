@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details - SkillHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SkillHire</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse-jobs.html">Browse Jobs</a>
+                <a href="login.html" id="loginLink">Login</a>
+                <a href="#" id="logoutLink" onclick="logout(); return false;" style="display: none;">Logout</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px;">
+        <div id="jobDetails">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/job-details.js"></script>
+</body>
+</html>
+

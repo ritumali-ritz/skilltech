@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard - SkillHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SkillHire</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" onclick="logout()">Logout</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#" class="active" onclick="showSection('post-job'); return false;">Post a Job</a></li>
+                    <li><a href="#" onclick="showSection('my-jobs'); return false;">My Jobs</a></li>
+                    <li><a href="#" onclick="showSection('applicants'); return false;">Applicants</a></li>
+                    <li><a href="#" onclick="showSection('company'); return false;">Company Profile</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Post Job Section -->
+                <section id="post-job" class="dashboard-section">
+                    <h2 style="margin-bottom: 2rem;">Post a New Job</h2>
+                    <div class="glass-card">
+                        <form id="postJobForm">
+                            <div class="form-group">
+                                <label for="jobTitle">Job Title *</label>
+                                <input type="text" id="jobTitle" name="jobTitle" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="jobDescription">Job Description *</label>
+                                <textarea id="jobDescription" name="jobDescription" rows="8" required></textarea>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="jobType">Job Type *</label>
+                                    <select id="jobType" name="jobType" required>
+                                        <option value="">Select...</option>
+                                        <option value="full_time">Full Time</option>
+                                        <option value="part_time">Part Time</option>
+                                        <option value="contract">Contract</option>
+                                        <option value="internship">Internship</option>
+                                        <option value="remote">Remote</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="category">Category *</label>
+                                    <select id="category" name="category" required>
+                                        <option value="">Select...</option>
+                                        <option value="IT">IT</option>
+                                        <option value="Design">Design</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Mechanical">Mechanical</option>
+                                        <option value="Healthcare">Healthcare</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., New York, NY or Remote">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="salaryMin">Min Salary</label>
+                                    <input type="number" id="salaryMin" name="salaryMin">
+                                </div>
+                                <div class="form-group">
+                                    <label for="salaryMax">Max Salary</label>
+                                    <input type="number" id="salaryMax" name="salaryMax">
+                                </div>
+                                <div class="form-group">
+                                    <label for="salaryCurrency">Currency</label>
+                                    <select id="salaryCurrency" name="salaryCurrency">
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="experienceRequired">Experience Required (Years)</label>
+                                    <input type="number" id="experienceRequired" name="experienceRequired" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="educationRequired">Education Required</label>
+                                    <input type="text" id="educationRequired" name="educationRequired" placeholder="e.g., Bachelor's Degree">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Required Skills *</label>
+                                <div id="skillsContainer" style="margin-top: 0.5rem;"></div>
+                                <select id="skillSelect" style="margin-top: 1rem; width: 100%;">
+                                    <option value="">Select a skill to add...</option>
+                                </select>
+                                <button type="button" onclick="addJobSkill()" class="btn btn-secondary" style="margin-top: 0.5rem;">Add Skill</button>
+                            </div>
+
+                            <div id="alertContainer"></div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                                Post Job
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- My Jobs Section -->
+                <section id="my-jobs" class="dashboard-section hidden">
+                    <h2 style="margin-bottom: 2rem;">My Job Postings</h2>
+                    <div id="myJobsList">
+                        <div class="spinner"></div>
+                    </div>
+                </section>
+
+                <!-- Applicants Section -->
+                <section id="applicants" class="dashboard-section hidden">
+                    <h2 style="margin-bottom: 2rem;">Job Applicants</h2>
+                    <div id="applicantsContent">
+                        <p style="color: var(--text-secondary);">Select a job to view applicants</p>
+                    </div>
+                </section>
+
+                <!-- Company Profile Section -->
+                <section id="company" class="dashboard-section hidden">
+                    <h2 style="margin-bottom: 2rem;">Company Profile</h2>
+                    <div id="companyContent">
+                        <div class="spinner"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/employer-dashboard.js"></script>
+</body>
+</html>
+

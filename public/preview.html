@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillHire - UI Preview</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .preview-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .preview-section {
+            margin-bottom: 4rem;
+        }
+        .preview-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .preview-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .preview-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .preview-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .preview-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .preview-link:hover {
+            text-decoration: underline;
+        }
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SkillHire</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="preview.html" class="active">Preview</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="preview-container">
+        <div class="hero" style="padding: 3rem 2rem; margin-bottom: 3rem;">
+            <h1 style="text-align: center; margin-bottom: 1rem;">SkillHire UI Preview</h1>
+            <p style="text-align: center; color: var(--text-secondary);">
+                Explore the design system, components, and page layouts
+            </p>
+        </div>
+
+        <!-- Design System -->
+        <section class="preview-section">
+            <h2 class="preview-title">Design System</h2>
+            <div class="glass-card">
+                <h3>Color Palette</h3>
+                <div class="color-palette">
+                    <div class="color-box" style="background: #6366f1;">Primary</div>
+                    <div class="color-box" style="background: #8b5cf6;">Secondary</div>
+                    <div class="color-box" style="background: #ec4899;">Accent</div>
+                    <div class="color-box" style="background: #22c55e;">Success</div>
+                    <div class="color-box" style="background: #ef4444;">Error</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section class="preview-section">
+            <h2 class="preview-title">UI Components</h2>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <h3>Glass Cards</h3>
+                    <p>Frosted glass effect with backdrop blur</p>
+                    <div class="glass-card" style="margin-top: 1rem;">
+                        <p>This is a glass card component</p>
+                    </div>
+                </div>
+                <div class="preview-card">
+                    <h3>Buttons</h3>
+                    <p>Primary and secondary button styles</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-secondary">Secondary</button>
+                    </div>
+                </div>
+                <div class="preview-card">
+                    <h3>Skill Tags</h3>
+                    <p>Colored badges for skills</p>
+                    <div class="job-skills" style="margin-top: 1rem;">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="preview-card">
+                    <h3>Match Badges</h3>
+                    <p>Color-coded match scores</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <span class="match-badge high">85% Match</span>
+                        <span class="match-badge medium">65% Match</span>
+                        <span class="match-badge low">35% Match</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pages -->
+        <section class="preview-section">
+            <h2 class="preview-title">Pages</h2>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <h3>🏠 Home Page</h3>
+                    <p>Hero section, search bar, categories, and trending jobs</p>
+                    <ul class="feature-list">
+                        <li>Animated statistics</li>
+                        <li>Job search</li>
+                        <li>Category browsing</li>
+                        <li>Trending jobs</li>
+                    </ul>
+                    <a href="index.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>📝 Registration</h3>
+                    <p>User registration with role selection</p>
+                    <ul class="feature-list">
+                        <li>Role selection</li>
+                        <li>Password strength</li>
+                        <li>Form validation</li>
+                    </ul>
+                    <a href="register.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>🔐 Login</h3>
+                    <p>Secure authentication page</p>
+                    <ul class="feature-list">
+                        <li>Clean design</li>
+                        <li>Remember me</li>
+                        <li>Auto-redirect</li>
+                    </ul>
+                    <a href="login.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>👤 Job Seeker Dashboard</h3>
+                    <p>Personalized job recommendations</p>
+                    <ul class="feature-list">
+                        <li>Skill-based recommendations</li>
+                        <li>Application tracking</li>
+                        <li>Saved jobs</li>
+                        <li>Profile management</li>
+                    </ul>
+                    <a href="job-seeker-dashboard.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>💼 Employer Dashboard</h3>
+                    <p>Job posting and applicant management</p>
+                    <ul class="feature-list">
+                        <li>Post jobs</li>
+                        <li>View applicants</li>
+                        <li>Company profile</li>
+                        <li>Accept/Reject</li>
+                    </ul>
+                    <a href="employer-dashboard.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>⚙️ Admin Panel</h3>
+                    <p>Platform management and analytics</p>
+                    <ul class="feature-list">
+                        <li>Analytics dashboard</li>
+                        <li>User management</li>
+                        <li>Job approval</li>
+                        <li>Platform stats</li>
+                    </ul>
+                    <a href="admin-panel.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>🔍 Browse Jobs</h3>
+                    <p>Advanced job search and filtering</p>
+                    <ul class="feature-list">
+                        <li>Search functionality</li>
+                        <li>Multiple filters</li>
+                        <li>Pagination</li>
+                        <li>Job cards</li>
+                    </ul>
+                    <a href="browse-jobs.html" class="preview-link">View Page →</a>
+                </div>
+                <div class="preview-card">
+                    <h3>📄 Job Details</h3>
+                    <p>Complete job information page</p>
+                    <ul class="feature-list">
+                        <li>Full job description</li>
+                        <li>Apply functionality</li>
+                        <li>Save job</li>
+                        <li>Company info</li>
+                    </ul>
+                    <a href="job-details.html" class="preview-link">View Page →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="preview-section">
+            <h2 class="preview-title">Key Features</h2>
+            <div class="grid grid-3">
+                <div class="glass-card">
+                    <h3>🎯 Smart Matching</h3>
+                    <p>Skill-based job recommendations with match percentage</p>
+                </div>
+                <div class="glass-card">
+                    <h3>🔒 Secure Auth</h3>
+                    <p>JWT-based authentication with role-based access</p>
+                </div>
+                <div class="glass-card">
+                    <h3>📱 Responsive</h3>
+                    <p>Fully responsive design for all devices</p>
+                </div>
+                <div class="glass-card">
+                    <h3>🌙 Dark Mode</h3>
+                    <p>Toggle between light and dark themes</p>
+                </div>
+                <div class="glass-card">
+                    <h3>📊 Analytics</h3>
+                    <p>Platform statistics and insights</p>
+                </div>
+                <div class="glass-card">
+                    <h3>⚡ Fast & Modern</h3>
+                    <p>Modern UI with smooth animations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Card Example -->
+        <section class="preview-section">
+            <h2 class="preview-title">Job Card Example</h2>
+            <div class="job-card" style="max-width: 600px;">
+                <div class="job-title">Senior Full Stack Developer</div>
+                <div class="job-company">TechCorp Inc.</div>
+                <div class="job-meta">
+                    <span>📍 Remote</span>
+                    <span>💼 Full Time</span>
+                    <span>💰 $80,000 - $120,000</span>
+                </div>
+                <div class="job-skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">MySQL</span>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <button class="btn btn-primary">View Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SkillHire</h3>
+                <p>Connecting talent with opportunity through intelligent skill matching.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="browse-jobs.html">Browse Jobs</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+

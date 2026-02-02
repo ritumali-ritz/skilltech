@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillHire - Smart Job Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SkillHire</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse-jobs.html">Browse Jobs</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="register.html">Register</a>
+                <a href="login.html" class="btn btn-primary">Login</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Dream Job with SkillHire</h1>
+            <p>Connect with top employers and discover opportunities that match your skills</p>
+            
+            <!-- Job Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="jobSearch" placeholder="Search jobs by title, skills, or company...">
+                <input type="text" id="locationSearch" placeholder="Location" style="width: 150px;">
+                <button onclick="searchJobs()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="container">
+        <div class="stats" id="stats">
+            <div class="stat-item glass-card">
+                <div class="stat-icon">💼</div>
+                <div class="stat-number" data-target="0">0</div>
+                <div class="stat-label">Jobs Posted</div>
+            </div>
+            <div class="stat-item glass-card">
+                <div class="stat-icon">🏢</div>
+                <div class="stat-number" data-target="0">0</div>
+                <div class="stat-label">Companies</div>
+            </div>
+            <div class="stat-item glass-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-number" data-target="0">0</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-item glass-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number" data-target="0">0</div>
+                <div class="stat-label">Successful Hires</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container" id="categories">
+        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Browse by Category</h2>
+        <div class="grid grid-3" id="categoriesGrid">
+            <!-- Categories will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Trending Jobs Section -->
+    <section class="container" id="jobs">
+        <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Trending Jobs</h2>
+        <div id="jobsList">
+            <!-- Jobs will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SkillHire</h3>
+                <p>Connecting talent with opportunity through intelligent skill matching.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="browse-jobs.html">Browse Jobs</a>
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+            </div>
+            <div class="footer-section">
+                <h3>For Employers</h3>
+                <a href="register.html?role=employer">Post a Job</a>
+                <a href="login.html">Employer Login</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                    <a href="#" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
+

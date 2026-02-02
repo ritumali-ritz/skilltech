@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Jobs - SkillHire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SkillHire</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse-jobs.html">Browse Jobs</a>
+                <a href="login.html" id="loginLink">Login</a>
+                <a href="#" id="logoutLink" onclick="logout(); return false;" style="display: none;">Logout</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="margin-bottom: 2rem;">Browse Jobs</h1>
+
+        <!-- Filters -->
+        <div class="glass-card" style="margin-bottom: 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Search</label>
+                    <input type="text" id="searchInput" placeholder="Job title, skills...">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Category</label>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="IT">IT</option>
+                        <option value="Design">Design</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Agriculture">Agriculture</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Job Type</label>
+                    <select id="jobTypeFilter">
+                        <option value="">All Types</option>
+                        <option value="full_time">Full Time</option>
+                        <option value="part_time">Part Time</option>
+                        <option value="contract">Contract</option>
+                        <option value="internship">Internship</option>
+                        <option value="remote">Remote</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Location</label>
+                    <input type="text" id="locationFilter" placeholder="Location...">
+                </div>
+            </div>
+            <button onclick="applyFilters()" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Apply Filters</button>
+        </div>
+
+        <!-- Jobs List -->
+        <div id="jobsList">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" style="text-align: center; margin-top: 2rem;"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/browse-jobs.js"></script>
+</body>
+</html>
+
