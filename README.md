@@ -1,6 +1,34 @@
-# SkillHire - Smart Job Portal System
+# SkillTech - Modern Job Portal & Recruitment Management System
 
-A complete, production-ready online job portal with intelligent skill-based job matching, built with modern web technologies.
+**SkillTech** is a comprehensive, full-stack **Job Portal & Recruitment Management System** designed to bridge the gap between talented job seekers and employers. Built with a focus on modern aesthetics and seamless user experience, it provides a robust platform for career growth and talent acquisition.
+
+---
+
+### **🚀 Key Features**
+
+*   **Dual-User Ecosystem**: Dedicated dashboards and tailored workflows for both **Job Seekers** (to find and apply for jobs) and **Employers** (to post listings and manage applications).
+*   **Advanced Job Discovery**: Dynamic search and filtering system that allows users to browse jobs based on categories, skills, and industry requirements.
+*   **Secure Authentication**: Role-based access control (RBAC) ensuring that sensitive information and administrative tools are accessible only to authorized users.
+*   **Real-time Admin Oversight**: A centralized **Admin Panel** to monitor platform activity, manage registered companies, and curate skill sets.
+*   **Modern Interactive UI**: A premium, responsive interface featuring smooth transitions, glassmorphism elements, and intuitive navigation for a professional feel.
+*   **Automated Backend**: Powered by Node.js and Express, with a structured SQL database schema for efficient data handling and performance.
+
+---
+
+### **🛠️ Tech Stack**
+
+*   **Frontend**: HTML5, CSS3 (Custom Design System), JavaScript (ES6+)
+*   **Backend**: Node.js, Express.js
+*   **Database**: SQL (Structured for scalability)
+*   **Authentication**: JWT-based secure sessions
+*   **Tools**: Git, dotenv (Environment Management), RESTful APIs
+
+---
+
+### **🎯 Objective**
+The primary goal of **SkillTech** is to simplify the hiring process. By providing a clean, skill-focused environment, it ensures that the right talent finds the right opportunity without the noise of traditional job boards.
+
+---
 
 ## 🚀 Features
 
