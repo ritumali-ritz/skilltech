@@ -1,4 +1,4 @@
-# SkillHire - Project Summary
+# SkillTech - Project Summary
 
 ## ✅ Project Completion Status
 

@@ -1,4 +1,4 @@
-# 🚀 SkillHire: Smart Job Portal Documentation
+# 🚀 SkillTech: Modern Job Portal Documentation
 
 > **Transforming the hiring experience with intelligent skill matching.**
 
@@ -17,7 +17,7 @@
 ---
 
 ## 🌟 Project Overview
-**SkillHire** is a modern, full-stack job portal designed to bridge the gap between talented job seekers and top employers. Built with a focus on **User Experience (UX)** and **Data Integrity**, it features a unique **Skill Matching Algorithm** that calculates exactly how well a candidate fits a job role based on their profile.
+**SkillTech** is a modern, full-stack job portal designed to bridge the gap between talented job seekers and top employers. Built with a focus on **User Experience (UX)** and **Data Integrity**, it features a unique **Skill Matching Algorithm** that calculates exactly how well a candidate fits a job role based on their profile.
 
 ### 🎨 Design Philosophy
 *   **Aesthetic**: Modern Glassmorphism (Frosted glass effects).
@@ -117,6 +117,6 @@ skillhire-portal/
 ---
 
 ### 🎓 Prepared for: [Examiner/Project Guide]
-*   **Project Title**: SkillHire - A Smart Job Portal System
+*   **Project Title**: SkillTech - A Modern Job Portal & Recruitment System
 *   **Key Innovation**: Skill-Based Matching Algorithm
 *   **Platform**: Web-based (Responsive)
